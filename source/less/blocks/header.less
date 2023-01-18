@@ -1,11 +1,14 @@
 .page-header {
     width: 100vw;
+    height: 85px;
     position: absolute;
     z-index: 9;
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
         width: 100%;
+        height:100%;
         padding: 20px;
         box-sizing: border-box;
     }
@@ -13,5 +16,26 @@
     &__right {
         display: flex;
         flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    &__phone,
+    &__mail {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        text-align: right;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .page-header {
+        &__wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
     }
 }
